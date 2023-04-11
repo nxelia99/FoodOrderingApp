@@ -17,7 +17,7 @@ function About() {
                 </p>
             </div>
             <div className='flex items-center justify-center'>
-                <img src={aboutImage} className='w-[400px] h-[400px] object-cover' alt='about image' />
+                <img src={aboutImage} className='w-[400px] h-[400px] object-cover' alt='about' />
             </div>
 
         </div>
