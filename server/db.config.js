@@ -1,6 +1,3 @@
-const dbName = 'food-ordering';
-const dbHost = 'localhost';
-const dbPort = 27017;
 module.exports = {
-    url: `mongodb://${dbHost}:${dbPort}/${dbName}`
+    url: `mongodb+srv://Kai:AEXepNeXDY5x0H2N@cluster0.anxbw3l.mongodb.net/test`
 }
