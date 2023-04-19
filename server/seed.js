@@ -3,7 +3,7 @@ const MongoClient = require("mongodb").MongoClient;
 const _ = require("lodash");
 
 async function main() {
-    const uri = "mongodb+srv://Kai:AEXepNeXDY5x0H2N@cluster0.anxbw3l.mongodb.net/test";
+    const uri = "mongodb://127.0.0.1://27017";
     const client = new MongoClient(uri);
 
     try {
