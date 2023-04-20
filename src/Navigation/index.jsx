@@ -7,11 +7,14 @@ import LogIn from '../Pages/LogIn/LogIn';
 import Menu from '../Pages/Menu';
 import PaymentSucces from '../Pages/PaymentSuccess';
 import Register from '../Pages/Register';
+import { useSelector } from 'react-redux';
+import { cartProducts } from '../stores/cart/cartSlice';
 
 const Navigation = () => {
+  const productsInCart = useSelector(cartProducts);
   return (
     <BrowserRouter> 
-        <Header />
+        <Header cartCount={productsInCart ? productsInCart.length : 0} />
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<LogIn />} />

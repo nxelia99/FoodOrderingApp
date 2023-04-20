@@ -3,10 +3,13 @@ import  ProductPreviewCard  from "./ProductPreviewCard";
 import { useDispatch } from 'react-redux';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import AddProduct from './AddProduct';
+import { addToCart } from '../stores/cart/cartSlice';
 
 function ProductsPreview() {
 
   const [products, setProducts] = useState([]); 
+  const dispatch = useDispatch();
 
 
   useEffect(() =>{
@@ -36,18 +39,21 @@ function ProductsPreview() {
     }
   };
 
+  const onAddProduct = (product) =>{
+    dispatch(addToCart(product))
+  }
+
   
 
 
   return (
     <div className='container mx-auto pb-4 w-2/3 text-white'>
       <Carousel responsive={responsive}>
-        <h2>Products</h2>
         {
           products.length > 0 && products.map((product, index) =>{
             return(
               <div className="w-full p-3">
-                  <ProductPreviewCard key={index} product={product}  />
+                  <ProductPreviewCard key={index} product={product} onAddProduct={onAddProduct} />
               </div>
                 
             )

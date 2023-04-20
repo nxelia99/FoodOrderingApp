@@ -4,7 +4,7 @@ import cartIcon from "../assets/icons/cart.svg"
 import { Link } from 'react-router-dom'
 
 
-function Header() {
+function Header({cartCount}) {
   return (
     <nav id='header' className='bg-black text-white'>
         <div className='w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2'>
@@ -18,7 +18,9 @@ function Header() {
                 <Link to="#about" className='text-xl'>About</Link>
             </div>
             <div className='flex items-center justify-center space-x-4'>
-                <Link to="/cart"><img src={cartIcon} alt='Cart Icon' /></Link>
+                <Link to="/cart" className='mr-4 relative'><img src={cartIcon} alt='Cart Icon' />
+                    {cartCount > 0 ? <div className="rounded-full bg-yellow-400 text-white inline-flex justify-center items-center w-full absolute -top-1 -right-1">{cartCount}</div> : null}
+                </Link>
                 <Link to="/login">Log In</Link>
                 <Link to="/signup">Sign Up</Link>
             </div>
