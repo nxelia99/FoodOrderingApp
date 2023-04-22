@@ -22,11 +22,11 @@ async function main() {
         ]
 
         let products = [];
-        for (let i = 0; i < 10; i+=1) {
+        for (let i = 0; i < 14; i+=1) {
             let newProduct = {
                 name: faker.commerce.productName(),
                 adjective: faker.commerce.productAdjective(),
-                desciption: faker.commerce.productDescription(),
+                description: faker.commerce.productDescription(),
                 price: faker.commerce.price(),
                 category: _.sample(categories),
                 imageUrl: _.sample(imageUrls)
