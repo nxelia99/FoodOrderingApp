@@ -8,6 +8,7 @@ import carticon from "../../assets/icons/shopping-cart.512x462.png"
 import useTabSwitch from "../../hooks/useTabSwitch";
 import AddressForm from '../../Components/AddressForm';
 import ProductsSymmary from '../../Components/ProductsSymmary'
+import { StripeWrapper } from '../../Components/PaymentForm'
 
 function Cart() {
 
@@ -38,7 +39,7 @@ function Cart() {
               <AddressForm onTabSwitch={handleTabSwitch} />
             </div>
             <div className={`tabs ${currentTab !== 'Payment' ? 'hidden' : ''}`}>
-              PAY BITCH
+              <StripeWrapper />
             </div>
         </div>
   )
