@@ -1,7 +1,6 @@
-import { createSlice, createAsyncThunk
- } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
- const initialState = {
+const initialState = {
     products: [],
     error: null,
     status: 'idle',
