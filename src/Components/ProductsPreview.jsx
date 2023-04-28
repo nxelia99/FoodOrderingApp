@@ -53,7 +53,7 @@ function ProductsPreview() {
           products.length > 0 && products.map((product, index) =>{
             return(
               <div className="w-full p-3">
-                  <ProductPreviewCard key={index} product={product} onAddProduct={onAddProduct} />
+                  <ProductPreviewCard  product={product} key={index} onAddProduct={onAddProduct} />
               </div>
                 
             )

@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { cartProducts } from '../stores/cart/cartSlice' 
 import ProductsSummaryCard from './ProductsSummaryCard';
 
-function ProductsSymmary() {
+function ProductsSummary() {
     const cart = useSelector(cartProducts);
 
   return (
@@ -19,4 +19,4 @@ function ProductsSymmary() {
   )
 }
 
-export default ProductsSymmary
+export default ProductsSummary

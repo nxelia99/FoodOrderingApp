@@ -11,7 +11,7 @@ function ProductPreviewCard({product, onAddProduct}) {
     }
 
     return (
-        <div className="w-full p-4 m-2 rounded text-white bg-slate-800 text-center h-5/6">
+        <div className="w-full p-6 m-2 rounded text-white bg-slate-800 text-center h-5/6">
             <img src={product.imageUrl} alt={product.name} />
             <h2 className="pb-2 text-lg">{product.name}</h2>
             <p className="mb-2 h-24 line-clamp-4">{product.description}</p>

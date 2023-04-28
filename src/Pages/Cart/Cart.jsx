@@ -7,7 +7,7 @@ import { ReactComponent as ArrowRightSvg } from "../../assets/icons/arrow-right-
 import carticon from "../../assets/icons/shopping-cart.512x462.png"
 import useTabSwitch from "../../hooks/useTabSwitch";
 import AddressForm from '../../Components/AddressForm';
-import ProductsSymmary from '../../Components/ProductsSymmary'
+import ProductsSummary from '../../Components/ProductsSummary'
 import { StripeWrapper } from '../../Components/PaymentForm'
 
 function Cart() {
@@ -32,7 +32,7 @@ function Cart() {
     <div className="bg-white h-screen text-black mx-auto mt-2 border border-gray-200 p-4 md:w-2/3 rounded-lg shadow-md sm:p-6 lg:p-8">
             <Tabs list={tabs} onTabSwitch={handleTabSwitch} activeTab={currentTab} />
             <div className={`tabs ${currentTab !== 'Summary' ? 'hidden' : ''}`}>
-              <ProductsSymmary />
+              <ProductsSummary />
             </div>
             <div className={`tabs ${currentTab !== 'Delivery' ? 'hidden' : ''}`}>
               Delivery
